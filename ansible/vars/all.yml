@@ -1,0 +1,27 @@
+---
+server:
+    install: '1'
+    packages: [vim]
+    timezone: America/Lima
+    locale: es_ES.UTF-8
+vagrant_local:
+    install: '1'
+    vm: { base_box: trusty64, hostname: sebas, ip: 192.168.33.99, memory: '1024', sharedfolder: ./, useVagrantCloud: '1', syncType: nfs }
+apache:
+    install: '1'
+    docroot: /vagrant
+    servername: myApp.vb
+mysql:
+    install: '1'
+    root_password: '1234'
+    database: db
+    user: sebas
+    password: '1234'
+    dump: ''
+php:
+    install: '1'
+    ppa: php5-5.6
+    packages: [php5-cli, php5-intl, php5-mcrypt, php5-mysql]
+composer:
+    install: '1'
+
